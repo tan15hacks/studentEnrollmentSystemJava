@@ -4,6 +4,9 @@
  */
 package Courses;
 
+import studentenrollmentsystem.ApplicationForm;
+import studentenrollmentsystem.StudentFrame;
+
 /**
  *
  * @author User
@@ -73,6 +76,11 @@ public class AutomotiveCourses extends javax.swing.JFrame {
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton5.setMaximumSize(new java.awt.Dimension(800, 40));
         jButton5.setPreferredSize(new java.awt.Dimension(77, 55));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton5);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
@@ -145,6 +153,15 @@ public class AutomotiveCourses extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        ApplicationForm apply = new ApplicationForm();
+        apply.setLocationRelativeTo(null);
+        apply.setVisible(true);
+        
+        StudentFrame userFrame = new StudentFrame(apply);
+        userFrame.changeLabelText("Automotive Servicing NCIII");
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -229,6 +229,11 @@ public class ApplicationForm extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(0, 102, 153));
 
         addresstxtfield2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        addresstxtfield2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addresstxtfield2ActionPerformed(evt);
+            }
+        });
 
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("ONLY FILIPINO CITIZEN ABOVE 15 YEARS OLD CAN REGISTER/ENROLL");
@@ -808,6 +813,10 @@ public class ApplicationForm extends javax.swing.JFrame {
         StudentsRequirementsInfo reqInfo = new StudentsRequirementsInfo();
         reqInfo.setVisible(true);             
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void addresstxtfield2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addresstxtfield2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addresstxtfield2ActionPerformed
       
 
     private boolean validateFields() {

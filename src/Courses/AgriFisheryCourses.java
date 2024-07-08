@@ -4,6 +4,9 @@
  */
 package Courses;
 
+import studentenrollmentsystem.ApplicationForm;
+import studentenrollmentsystem.StudentFrame;
+
 /**
  *
  * @author User
@@ -59,6 +62,11 @@ public class AgriFisheryCourses extends javax.swing.JFrame {
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton1.setMaximumSize(new java.awt.Dimension(800, 40));
         jButton1.setPreferredSize(new java.awt.Dimension(77, 55));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton1);
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
@@ -163,6 +171,15 @@ public class AgriFisheryCourses extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        ApplicationForm apply = new ApplicationForm();
+        apply.setLocationRelativeTo(null);
+        apply.setVisible(true);
+        
+        StudentFrame userFrame = new StudentFrame(apply);
+        userFrame.changeLabelText("Agricultural Crops Production NCII");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

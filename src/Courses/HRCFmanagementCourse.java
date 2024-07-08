@@ -4,6 +4,9 @@
  */
 package Courses;
 
+import studentenrollmentsystem.ApplicationForm;
+import studentenrollmentsystem.StudentFrame;
+
 /**
  *
  * @author User
@@ -97,6 +100,11 @@ public class HRCFmanagementCourse extends javax.swing.JFrame {
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton7.setMaximumSize(new java.awt.Dimension(800, 40));
         jButton7.setPreferredSize(new java.awt.Dimension(77, 55));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton7);
 
         jButton9.setBackground(new java.awt.Color(255, 255, 255));
@@ -161,6 +169,15 @@ public class HRCFmanagementCourse extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        ApplicationForm apply = new ApplicationForm();
+        apply.setLocationRelativeTo(null);
+        apply.setVisible(true);
+        
+        StudentFrame userFrame = new StudentFrame(apply);
+        userFrame.changeLabelText("Food and Beverage Servicing NCII");
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments

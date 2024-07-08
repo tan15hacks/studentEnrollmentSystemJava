@@ -4,6 +4,9 @@
  */
 package Courses;
 
+import studentenrollmentsystem.ApplicationForm;
+import studentenrollmentsystem.StudentFrame;
+
 /**
  *
  * @author User
@@ -179,7 +182,12 @@ public class ComputerSoftwarDevCourse extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+        ApplicationForm apply = new ApplicationForm();
+        apply.setLocationRelativeTo(null);
+        apply.setVisible(true);
+        
+        StudentFrame userFrame = new StudentFrame(apply);
+        userFrame.changeLabelText("Programming Java NCIII");
     }//GEN-LAST:event_jButton9ActionPerformed
 
     /**

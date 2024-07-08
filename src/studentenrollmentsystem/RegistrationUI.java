@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import studentenrollmentsystem.StudentFrame;
+
 public class RegistrationUI extends javax.swing.JFrame {
 
     private UserDbAccess userDAO;
@@ -336,16 +338,19 @@ public class RegistrationUI extends javax.swing.JFrame {
 
     boolean registered = userDAO.registerUser(lname, fname, mname, age, gender, formatDate(birthday), email, password);
 
-    if (registered) {
-        JOptionPane.showMessageDialog(null, "Registration successful!");
-        StudentFrame sframe = new StudentFrame();
-        sframe.setVisible(true);
-        clearFields();
-        dispose();
-    } else {
-        JOptionPane.showMessageDialog(null, "Registration failed!");
-    }
+   if (registered) {
+    StudentFrame sframe = new StudentFrame();
+    JOptionPane.showMessageDialog(null, "Registration successful!");
+    sframe.setVisible(true);
+    clearFields();
+    dispose();
+} else {
+    JOptionPane.showMessageDialog(null, "Registration failed!");
+}
+
     }//GEN-LAST:event_regButtonActionPerformed
+    
+
 
      private void clearFields() {
         lnameTxtfield.setText("");
